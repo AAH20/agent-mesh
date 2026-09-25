@@ -31,7 +31,7 @@ Local agents on your MacBook can discover and invoke Model Context Protocol (MCP
 ```mermaid
 graph TD
     subgraph LocalDev["Developer Workstation (MacBook Pro)"]
-        MacAgent["Agent Loop\n(Claude / Cursor / Devin)"]
+        MacAgent["Agent Loop\n(Claude Opus 5.5 / GPT-6 Astra)"]
         MacNode["Agent-Mesh Node\n(IP: 100.64.244.252)"]
         MacAgent -->|Local MCP Call| MacNode
     end
@@ -43,7 +43,7 @@ graph TD
 
     subgraph GPURig["GPU Compute Rig (RunPod / Lambda Cloud)"]
         GPUNode["Agent-Mesh Node\n(IP: 100.64.68.241)"]
-        vLLM["DeepSeek-R1 Inference Server\n(8x H100 SXM5)"]
+        vLLM["DeepSeek V4.1-Flash Inference\n(8x H100 SXM5)"]
         Embeddings["BGE-M3 Vector Embedder"]
         GPUNode --> vLLM
         GPUNode --> Embeddings
