@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-mesh"
+version = "1.0.0"
+description = "Zero-Config Tailscale / WireGuard P2P Mesh for Distributed Agent Swarms"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Antigravity Autonomous Engineering", email = "engineering@antigravity.dev"}]
+dependencies = []
+
+[project.scripts]
+agent-mesh = "agent_mesh.cli:main"
